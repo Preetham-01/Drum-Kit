@@ -1,9 +1,10 @@
 var noInstruments = document.querySelectorAll(".drum").length;
+
 for(var i=0;i<noInstruments;i++){
     document.querySelectorAll(".drum")[i].addEventListener("click",music);
 }
-function music()
-{
+
+function music(){
     var btnInnerHtml=this.innerHTML;
     makesound(btnInnerHtml);
 }
@@ -12,8 +13,7 @@ document.addEventListener("keypress",function(event){
     makesound(event.key);
 })
 
-function makesound(key)
-{
+function makesound(key){
     switch(key)
     {
         case "w":
